@@ -1,0 +1,9 @@
+Bundle-Name: faq-training-api
+Bundle-SymbolicName: fr.smile.training.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	fr.smile.training.exception,\
+	fr.smile.training.model,\
+	fr.smile.training.service,\
+	fr.smile.training.service.persistence
+-includeresource: META-INF/service.xml=../faq-training-service/service.xml

@@ -1,0 +1,49 @@
+
+<c:set var="addressListType"  value="${address.type}"/>
+<c:set var="mailingName">
+	<liferay-ui:message key="${addressListType.name}" />
+</c:set>
+
+<c:set var="street1"  value="${address.street1}"/>
+<c:set var="street2"  value="${address.street2}"/>
+<c:set var="street3"  value="${address.street3}"/>
+<c:set var="zipCode"  value="${address.zip}"/>
+<c:set var="city"  value="${address.city}"/>
+
+<c:set var="region"  value="${address.region}"/>
+<c:set var="regionName"  value="${region.name}"/>
+
+<c:set var="country"  value="${address.country}"/>
+<c:set var="countryName"  value="${country.name}"/>
+
+<em class="mailing-name">${mailingName}</em>
+
+<c:if test="${not empty street1}">
+	${htmlUtil.escape(street1)}<br />
+</c:if>
+
+<c:if test="${not empty street2}">
+	${htmlUtil.escape(street2)}<br />
+</c:if>
+
+<c:if test="${not empty street3}">
+	${htmlUtil.escape(street3)}<br />
+</c:if>
+
+<c:if test="${not empty zipCode}">
+	${htmlUtil.escape(zipCode)},
+</c:if>
+
+<c:if test="${not empty city}">
+	${htmlUtil.escape(city)}<br />
+</c:if>
+
+<c:if test="${not empty regionName}">
+	${htmlUtil.escape(regionName)}<br />
+</c:if>
+
+<c:if test="${not empty countryName}">
+	${htmlUtil.escape(countryName)}
+</c:if>
+
+<c:if test="${address.isMailing()}">(<liferay-ui:message key="mailing" />)</c:if>

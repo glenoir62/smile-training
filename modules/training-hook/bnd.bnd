@@ -1,0 +1,8 @@
+Bundle-Name: training-hook
+Bundle-SymbolicName: training.hook
+Bundle-Version: 1.0.0
+Export-Package: training.hook.api
+Web-ContextPath: /trainingHookStrutsAction
+-jsp: *.jsp,*.jspf
+-plugin.jsp: com.liferay.ant.bnd.jsp.JspAnalyzerPlugin
+-sources: true

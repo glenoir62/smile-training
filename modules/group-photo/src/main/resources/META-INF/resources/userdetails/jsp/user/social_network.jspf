@@ -1,0 +1,28 @@
+
+<c:set var="facebook"  value="${contact.getFacebookSn()}"/>
+<c:set var="twitter"  value="${contact.getTwitterSn()}"/>
+
+
+<c:if test='${ not empty facebook || not empty twitter }'>
+	<h3 class="icon-group"> <liferay-ui:message key="social-network" /></h3>
+	
+	<dl class="property-list">
+		<c:if test='${ not empty facebook }'>
+			<dt>
+				<liferay-ui:message key="facebook" />
+			</dt>
+			<dd>
+				${ htmlUtil.escape(facebook)} 
+			</dd>
+		</c:if>
+
+		<c:if test='${ not empty twitter }'>
+			<dt>
+				<liferay-ui:message key="twitter" />
+			</dt>
+			<dd>
+				${ htmlUtil.escape(twitter) }
+			</dd>
+		</c:if>
+	</dl>
+</c:if>

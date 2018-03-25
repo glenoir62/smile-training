@@ -1,0 +1,3 @@
+Bundle-SymbolicName: helloservice.api
+Bundle-Version: 1.0.0
+Export-Package: fr.smile.training.liferay.service.api.api

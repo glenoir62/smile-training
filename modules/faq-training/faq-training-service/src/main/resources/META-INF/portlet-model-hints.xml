@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="fr.smile.training.model.Faq">
+		<field name="uuid" type="String" />
+		<field name="entryId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="question" type="String" />
+		<field name="answer" type="String" />
+	</model>
+</model-hints>

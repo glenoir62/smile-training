@@ -1,0 +1,56 @@
+@import "mixins";
+
+html body {
+	background-color: white ;
+}
+.user-details-portlet {
+	
+		.column-1 {
+/* 			border: 0 solid transparent; */
+/*     		box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2); */
+
+			margin-top: 15px;
+		    margin-bottom: 15px;
+		}
+		
+		h3 {
+			    background: no-repeat scroll 2px 50%;
+			    border-bottom: 1px solid #65B6F0;
+			    line-height: 1.5;
+			    margin-bottom: 0.5em;
+			    background-color: #F5F8FA;
+			    color: #65B6F0;
+		}
+		
+		h4 {
+			color: #869CAD;
+		}
+
+		li {
+			list-style: none;
+			margin: 0;
+		}
+
+		ul {
+			margin: 0;
+		}
+		
+		dt {
+			color: #869CAD;
+		}
+		    
+		
+		.instant-messenger, .social-network {
+			clear: both;
+			margin-bottom: 2em;
+			overflow: hidden;
+	
+			img {
+				margin-left: 1em;
+			}
+	
+			.form-group {
+				margin: 0;
+			}
+		}
+}

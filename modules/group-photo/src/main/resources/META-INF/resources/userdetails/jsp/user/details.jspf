@@ -1,0 +1,73 @@
+
+<h3 class="icon-comments"> <liferay-ui:message key="user-info" /></h3>
+
+<div class="row-fluid">
+	<liferay-frontend:user-vertical-card
+		cssClass="entry-display-style"
+		title="${user2.getFullName()}"
+		userId="${user2.userId}"
+		url="#"
+	>
+
+			
+		<liferay-frontend:vertical-card-header>
+			<dl class="property-list">
+				<c:if test="${not empty user2.displayEmailAddress}">
+					<dt>
+						<liferay-ui:message key="email-address" />
+					</dt>
+					<dd>
+						${user2.displayEmailAddress}
+					</dd>
+				</c:if>
+		
+				<c:if test="${not empty birthday}">
+					<dt>
+						<liferay-ui:message key="birthday" />
+					</dt>
+					<dd>
+						${birthday}
+					</dd>
+				</c:if>
+		
+				<c:if test="${not empty jobTitle}">
+					<dt>
+						<liferay-ui:message key="job-title" />
+					</dt>
+					<dd>
+						${jobTitle}
+					</dd>
+				</c:if>
+		
+				<c:if test="${not empty gender}">
+					<dt>
+						<liferay-ui:message key="gender" />
+					</dt>
+					<dd>
+						${gender}
+					</dd>
+				</c:if>
+		
+				<c:if test="${!organizations.isEmpty()}">
+					<dt>
+						<c:choose>
+							<c:when test="${organizations.size() > 1 }">
+								<liferay-ui:message key="organizations" />
+							</c:when>
+							<c:otherwise>
+								<liferay-ui:message key="organization" />
+							</c:otherwise>
+						</c:choose>
+					</dt>
+					<dd>
+						${organizationsHTML}
+					</dd>
+				</c:if>
+			</dl>	
+		</liferay-frontend:vertical-card-header>
+	
+		<liferay-frontend:vertical-card-footer>
+			<aui:workflow-status markupView="lexicon" showIcon="<%= false %>" showLabel="<%= false %>" status="${user2.status}" />
+		</liferay-frontend:vertical-card-footer>
+	</liferay-frontend:user-vertical-card>
+</div>

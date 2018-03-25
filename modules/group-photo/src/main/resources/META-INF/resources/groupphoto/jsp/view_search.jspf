@@ -1,0 +1,69 @@
+
+<%@page import="com.liferay.portal.kernel.portlet.LiferayWindowState"%>
+<%@page import="javax.portlet.PortletMode"%>
+<%@page import="javax.portlet.PortletRequest"%>
+
+<liferay-ui:search-container id="users"
+	searchContainer="${searchUserContainer}">
+
+		<liferay-ui:search-container-row
+			className="com.liferay.portal.kernel.model.User" keyProperty="userId"
+			modelVar="user2" cssClass="entry-card lfr-asset-item">
+			<liferay-ui:search-container-column-text>
+				<div class="user-photo-group" data-user-name="${user2.getFullName()}" data-user-id="${user2.userId}">
+					<liferay-frontend:user-vertical-card
+						cssClass="entry-display-style"
+						title="${user2.getFullName()}"
+						userId="${user2.userId}"
+						url="#"
+					>
+						<liferay-frontend:vertical-card-footer>
+							<aui:workflow-status markupView="lexicon" showIcon="<%= false %>" showLabel="<%= false %>" status="${user2.status}" />
+						</liferay-frontend:vertical-card-footer>
+	
+					</liferay-frontend:user-vertical-card>
+				</div>
+			</liferay-ui:search-container-column-text>
+		</liferay-ui:search-container-row>
+	<liferay-ui:search-iterator displayStyle="icon" markupView="lexicon"/>
+</liferay-ui:search-container>
+
+<aui:script use="aui-base,liferay-portlet-url">
+
+	A.all('.user-photo-group').on('click', function(event){
+		event.preventDefault();
+		var userId = event.currentTarget.getData('user-id');
+
+		if (userId) {
+			
+			var portletURL = new Liferay.PortletURL();
+			portletURL.setLifecycle('<%= PortletRequest.RENDER_PHASE %>');
+			portletURL.setPortletId('${userDetailsPortletId}');
+			portletURL.setParameter("p_auth", Liferay.authToken);
+			portletURL.setParameter("userId", userId);
+			portletURL.setParameter("saveLastPath", false);
+			portletURL.setParameter("mvcRenderCommandName", "/");
+			portletURL.setPortletMode('<%= PortletMode.VIEW %>');
+			portletURL.setWindowState('<%= LiferayWindowState.POP_UP %>');
+			
+			Liferay.Util.openWindow (
+		        {
+	     			dialog: {
+						destroyOnHide: true,
+						width: 650,
+						height: 450
+					},
+					data : {
+						p_auth : Liferay.authToken
+					},
+					title: event.currentTarget.getData('user-name'),
+		            id: '<portlet:namespace/>window-directory-user',
+		            uri: portletURL.toString()
+		        }
+		    );
+		}
+	});
+
+</aui:script>
+
+

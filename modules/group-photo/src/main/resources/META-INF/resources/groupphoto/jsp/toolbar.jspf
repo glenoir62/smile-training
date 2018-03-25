@@ -1,0 +1,51 @@
+<c:set value="${searchUserContainer.displayTerms}" var="displayTerms" />
+
+<liferay-portlet:renderURL varImpl="searchURL" >
+	<portlet:param name="mvcRenderCommandName" value="/groupphoto/view" />
+	<portlet:param name="resetCur" value="true" />
+</liferay-portlet:renderURL>
+
+<aui:form action="${searchURL.toString()}" method="post" name="fm">
+	<aui:nav-bar cssClass="collapse-basic-search" markupView="lexicon">
+	
+		<aui:nav-bar-search>
+			<liferay-ui:search-toggle markupView="lexicon"
+				autoFocus="<%= liferayPortletRequest.getWindowState().equals(WindowState.MAXIMIZED) %>"
+				buttonLabel="search" displayTerms="${displayTerms}"
+				id="<%= renderResponse.getNamespace() %>">
+				<aui:fieldset markupView="lexicon">
+
+					<aui:input name="<%= UserDisplayTerms.SCREEN_NAME %>" size="20" type="text" value="${displayTerms.getScreenName()}" />
+					
+					<aui:input name="<%= UserDisplayTerms.FIRST_NAME %>" size="20" type="text" value="${displayTerms.getFirstName()}" />
+
+					<aui:input name="<%= UserDisplayTerms.LAST_NAME %>" size="20" type="text" value="${displayTerms.getLastName()}" />
+					
+					<aui:input name="<%= UserDisplayTerms.EMAIL_ADDRESS %>" size="20" type="text" value="${displayTerms.getEmailAddress()}" />
+					
+				</aui:fieldset>
+			</liferay-ui:search-toggle>
+		</aui:nav-bar-search>
+	</aui:nav-bar>
+</aui:form>
+
+<liferay-frontend:management-bar
+	includeCheckBox="false"
+	searchContainerId="users"
+>
+	<liferay-frontend:management-bar-filters>
+		<liferay-frontend:management-bar-navigation
+			navigationKeys='<%= new String[] {"active", "inactive"} %>'
+			portletURL="<%= renderResponse.createRenderURL() %>"
+		/>
+
+		<liferay-frontend:management-bar-sort
+			orderByCol="${searchUserContainer.getOrderByCol()}"
+			orderByType="${searchUserContainer.getOrderByType()}"
+			orderColumns='<%= new String[] {"first-name", "last-name", "screen-name"} %>'
+			portletURL="${portletURL}"
+		/>
+	</liferay-frontend:management-bar-filters>
+
+</liferay-frontend:management-bar>
+

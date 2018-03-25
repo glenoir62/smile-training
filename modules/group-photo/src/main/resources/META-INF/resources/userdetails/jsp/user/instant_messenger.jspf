@@ -1,0 +1,29 @@
+
+<c:set var="jabberSn"  value="${contact.getJabberSn()}"/>
+<c:set var="skypeSn"  value="${contact.getSkypeSn()}"/>
+
+
+<c:if test='${ not empty jabberSn || not empty skypeSn }'>
+	<h3 class="icon-comments"> <liferay-ui:message key="instant-messenger" /></h3>
+
+	<dl class="property-list">
+		<c:if test='${ not empty jabberSn }'>
+			<dt>
+				<liferay-ui:message key="jabber" />
+			</dt>
+			<dd>
+				${ htmlUtil.escape(jabberSn)} 
+			</dd>
+		</c:if>
+
+		<c:if test='${ not empty skypeSn }'>
+			<dt>
+				<liferay-ui:message key="skype" />
+			</dt>
+			<dd>
+				${ htmlUtil.escape(skypeSn) }
+				<a href="callto://${ htmlUtil.escapeAttribute(skypeSn) }"><img alt='<liferay-ui:message escapeAttribute="${ true }" key="call-this-user" />' class="instant-messenger-logo" src="http://mystatus.skype.com/smallicon/${ htmlUtil.escapeAttribute(skypeSn) }" /></a>
+			</dd>
+		</c:if>
+	</dl>
+</c:if>

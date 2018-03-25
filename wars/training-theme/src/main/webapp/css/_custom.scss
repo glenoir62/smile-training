@@ -1,0 +1,16 @@
+@import "bourbon";
+@import "mixins";
+@import "compass/css3";
+
+$primary-color: blue;
+$border-size: 23px;
+
+body {
+	background-color: red;
+}
+
+body .site-name {
+	color: white;
+	@include border-radius($border-size);
+	background-color: $primary-color;
+}

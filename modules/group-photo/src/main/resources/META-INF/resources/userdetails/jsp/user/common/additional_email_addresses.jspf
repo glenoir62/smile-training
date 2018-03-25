@@ -1,0 +1,16 @@
+
+<c:if test="${!emailAddresses.isEmpty()}">
+	<h3 class="icon-envelope"> <liferay-ui:message key="additional-email-addresses" /></h3>
+
+	<ul class="property-list">
+
+		 <c:forEach var="emailAddress" items="${emailAddresses}">
+
+			<li class='${(emailAddress.isPrimary() && !emailAddresses.isEmpty()) ? "icon-star" : "" }'>
+				<a href="mailto:${emailAddress.getAddress()}">${emailAddress.getAddress()}</a>
+				<liferay-ui:message key="${emailAddress.getType().getName()}" />
+			</li>
+		</c:forEach>
+
+	</ul>
+</c:if>
