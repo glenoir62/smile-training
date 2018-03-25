@@ -1,4 +1,0 @@
-Bundle-Name: faq-training-web
-Bundle-SymbolicName: faq.training.web
-Bundle-Version: 1.0.0
-Export-Package: faq.training.web.constants
