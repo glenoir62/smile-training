@@ -1,4 +1,4 @@
-<%@ include file="/init.jsp"%>
+<%@ include file="init.jsp"%>
 <p>
 	<portlet:renderURL var="nextViewURL">
 		<portlet:param name="mvcRenderCommandName" value="Next" />

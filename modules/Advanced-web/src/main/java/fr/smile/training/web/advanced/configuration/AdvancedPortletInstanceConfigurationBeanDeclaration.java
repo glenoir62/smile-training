@@ -4,6 +4,10 @@ import com.liferay.portal.kernel.settings.definition.ConfigurationBeanDeclaratio
 
 import org.osgi.service.component.annotations.Component;
 
+/**
+ * @author guillaumelenoir
+ *
+ */
 @Component
 public class AdvancedPortletInstanceConfigurationBeanDeclaration implements ConfigurationBeanDeclaration {
 	@Override

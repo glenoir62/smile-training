@@ -29,6 +29,10 @@ import javax.ws.rs.core.Application;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
 
+/**
+ * @author guillaumelenoir
+ *
+ */
 @Component(
 	immediate = true,
 	property = {

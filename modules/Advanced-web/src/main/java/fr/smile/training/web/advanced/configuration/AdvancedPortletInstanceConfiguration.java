@@ -6,6 +6,8 @@ import aQute.bnd.annotation.metatype.Meta;
 
 /**
  * 
+ * @author guillaumelenoir
+ * 
  * (1) Meta.OCD: Registers this class as a configuration with a specific id. We can choose any string we want, but it should be unique.
  *  A common pattern is to use the fully qualified class name.
  *
@@ -30,7 +32,6 @@ import aQute.bnd.annotation.metatype.Meta;
  * (8)The configuration will create one User Interface in the Liferay Control Panel
  * where we can set our configuration values 
  */
-
 @ExtendedObjectClassDefinition(
 		scope = ExtendedObjectClassDefinition.Scope.PORTLET_INSTANCE,
 		category = "formation")

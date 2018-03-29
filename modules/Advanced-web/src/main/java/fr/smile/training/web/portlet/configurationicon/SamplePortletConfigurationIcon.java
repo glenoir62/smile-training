@@ -1,4 +1,4 @@
-package fr.smile.training.web.portlet.action;
+package fr.smile.training.web.portlet.configurationicon;
 
 import com.liferay.portal.kernel.portlet.configuration.icon.BasePortletConfigurationIcon;
 
@@ -7,6 +7,10 @@ import javax.portlet.PortletResponse;
 
 import org.osgi.service.component.annotations.Component;
 
+/**
+ * @author guillaumelenoir
+ *
+ */
 @Component(
 		immediate = true,
 		property = {"javax.portlet.name=fr_smile_training_web_advanced_portlet_AdvancedPortlet"},

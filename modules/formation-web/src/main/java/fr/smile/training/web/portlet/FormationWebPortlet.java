@@ -160,7 +160,7 @@ public class FormationWebPortlet extends MVCPortlet {
 	@Override
 	public void serveResource(ResourceRequest resourceRequest, ResourceResponse resourceResponse)
 			throws IOException, PortletException {
-		LOGGER.info("render FormationWebPortlet");
+		LOGGER.info("serveResource FormationWebPortlet");
 		super.serveResource(resourceRequest, resourceResponse);
 	}
 	

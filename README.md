@@ -45,10 +45,13 @@ Slides 82 -83
 /smile-training/modules/formation-web/src/main/java/fr/smile/training/web/portlet/FormationWebPortlet.java
 
 Slide 85
-A faire, travail perdu
+/smile-training/modules/formation-web/src/main/resources/META-INF/resources/edit.jsp
 
-Slides 86 -> 91
-A faire, travail perdu
+Slides 86 -> 87
+/smile-training/modules/formation-web/src/main/java/fr/smile/training/web/portlet/FormationWebPortlet.java
+
+Slides 88
+smile-training/modules/formation-web/src/main/resources/META-INF/resources/view.jsp
 
 Slides 92 -> 93
 /smile-training/modules/Advanced-web/src/main/resources/META-INF/resources/view.jsp
