@@ -86,7 +86,7 @@ Attention, renseigner dans AdvancedWebPortlet "javax.portlet.init-param.config-t
 
 Slide 100
 
-A faire; travail perdu
+/Advanced-web/src/main/java/fr/smile/training/web/portlet/configuration/AdvancedPortletConfigurationAction.java
 /smile-training/modules/Advanced-web/src/main/java/fr/smile/training/web/portlet/AdvancedPortletConfigurationAction.java
 
 Slide 101 

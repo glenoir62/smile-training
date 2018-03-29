@@ -46,6 +46,7 @@ public class AdvancedPortletConfigurationAction extends DefaultConfigurationActi
 		
 		// Add validation
 		// get preferences--city-- from form
+		// Slide 100
 		String city = ParamUtil.getString(actionRequest, "preferences--city--");
 		
 		if (!Validator.isBlank(city) && Validator.isAlphanumericName(city)) {
@@ -62,7 +63,7 @@ public class AdvancedPortletConfigurationAction extends DefaultConfigurationActi
 			throws Exception {
 		
 		// Init city from AdvancedPortletInstanceConfiguration
-		
+		// Slide 100
 		try {
 			ThemeDisplay themeDisplay = (ThemeDisplay) request.getAttribute(WebKeys.THEME_DISPLAY);
 
