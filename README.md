@@ -1,6 +1,10 @@
 Liferay 7 demo plugins
 ===========
 
+Docs :
+
+https://dev.liferay.com/zh/develop/tutorials/
+
 Remplacer maven par gradle.
 
 slide 41 Activator (facultatif si on utilise @Component(immediate = true, property = {
@@ -110,17 +114,23 @@ Slide 114
 
 ou
 
-
 /smile-training/modules/create-account-jsp-override/doclib-resource-command-override
 
 Slide 115
 /smile-training/modules/create-account-jsp-override/src/main/resources/META-INF/resources/create_account.jsp
 
 Slide 119
-A faire, travail perdu
+/smile-training/modules/training-hook/src/main/java/fr/smile/training/action/ExpandoValuesStartupAction.java
 
 Slide 120 - 123
-A faire, travail perdu
+I18N voir =>
+https://dev.liferay.com/zh/develop/tutorials/-/knowledge_base/7-0/localizing-your-application
+/smile-training/modules/resource-bundle
+
+Pour surcharger les traductions des modules :
+
+https://dev.liferay.com/zh/develop/tutorials/-/knowledge_base/7-0/overriding-language-keys
+smile-training/modules/training-hook/src/main/java/fr/smile/training/action/MyBlogsResourceBundleLoader.java
 
 Slide 124 - 126
 /smile-training/modules/user-service-wrapper/src/main/java/com/liferay/blade/samples/service/hook/user/UserLocalServiceHook.java
