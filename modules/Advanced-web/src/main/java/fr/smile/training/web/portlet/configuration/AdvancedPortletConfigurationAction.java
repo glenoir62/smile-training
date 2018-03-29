@@ -1,13 +1,8 @@
 package fr.smile.training.web.portlet.configuration;
 
-import java.io.IOException;
-
 import javax.portlet.ActionRequest;
 import javax.portlet.ActionResponse;
 import javax.portlet.PortletConfig;
-import javax.portlet.PortletException;
-import javax.portlet.RenderRequest;
-import javax.portlet.RenderResponse;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -24,7 +19,6 @@ import com.liferay.portal.kernel.util.ParamUtil;
 import com.liferay.portal.kernel.util.Validator;
 import com.liferay.portal.kernel.util.WebKeys;
 
-import aQute.libg.reporter.Message;
 import fr.smile.training.web.advanced.configuration.AdvancedPortletInstanceConfiguration;
 import fr.smile.training.web.portlet.action.ViewMVCRenderCommand;
 
