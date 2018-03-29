@@ -1,6 +1,11 @@
-<%@ include file="/init.jsp" %>
+<%@ include file="init.jsp" %>
 
-<h1>Hello ${name}</h1>
+
 <p>
+	<%-- Translation from smile-training/modules/formation-web/src/main/resources/content/Language.properties --%>
 	<b><liferay-ui:message key="formation_web_FormationWeb.caption"/></b>
 </p>
+
+<div class="hello-world-display">
+	<span>HELLO ${EDIT_VALUE}</span>
+</div>
