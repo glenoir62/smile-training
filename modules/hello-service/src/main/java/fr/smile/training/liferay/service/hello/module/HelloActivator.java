@@ -15,15 +15,15 @@ public class HelloActivator implements BundleActivator {
 	
 	@Override
 	public void start(BundleContext bundleContext) throws Exception {
-//		_serviceRegistration = bundleContext.registerService(HelloService.class, new HelloServiceImpl(), null);
-//		System.out.println("###########Service Registered Successfully##############");
+		_serviceRegistration = bundleContext.registerService(HelloService.class, new HelloServiceImpl(), null);
+		System.out.println("###########Service Registered Successfully##############");
 	}
 
 	@Override
 	public void stop(BundleContext bundleContext) throws Exception {
-//		_serviceRegistration.unregister();
-//		_serviceRegistration =  null;
-//		 System.out.println("###########Service Unregistered##############");
+		_serviceRegistration.unregister();
+		_serviceRegistration =  null;
+		 System.out.println("###########Service Unregistered##############");
 	}
 
 }
