@@ -47,9 +47,10 @@ public class AdvancedPortletConfigurationAction extends DefaultConfigurationActi
 		// Add validation
 		// get preferences--city-- from form
 		// Slide 100
-		String city = ParamUtil.getString(actionRequest, "preferences--city--");
+		String city = ParamUtil.getString(actionRequest, "city");
 		
 		if (!Validator.isBlank(city) && Validator.isAlphanumericName(city)) {
+			setPreference(actionRequest, "city", city);
 			super.processAction(portletConfig, actionRequest, actionResponse);
 		} else {
 			SessionErrors.add(actionRequest, "city-errors");

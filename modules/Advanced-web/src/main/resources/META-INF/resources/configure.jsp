@@ -9,7 +9,7 @@
 	<aui:input name="<%=Constants.CMD%>" type="hidden"
 		value="<%=Constants.UPDATE%>" />
 	<aui:fieldset>
-		<aui:input name="preferences--city--" type="text" value="${advancedPortletInstanceConfiguration.city()}" >
+		<aui:input name="city" type="text" value="${advancedPortletInstanceConfiguration.city()}" >
 			<aui:validator name="required"/>
 			<aui:validator name="alphanum"/>
 		</aui:input>
