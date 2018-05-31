@@ -10,10 +10,10 @@ import com.liferay.portal.kernel.util.CacheResourceBundleLoader;
 import com.liferay.portal.kernel.util.ClassResourceBundleLoader;
 import com.liferay.portal.kernel.util.ResourceBundleLoader;
 
-@Component(immediate = true, property = {
-		"bundle.symbolic.name=com.liferay.blogs.web",
-		"resource.bundle.base.name=content.Language",
-		"servlet.context.name=blogs-web" })
+//@Component(immediate = true, property = {
+//		"bundle.symbolic.name=com.liferay.blogs.web",
+//		"resource.bundle.base.name=content.Language",
+//		"servlet.context.name=blogs-web" })
 public class MyBlogsResourceBundleLoader implements ResourceBundleLoader {
 
 	

@@ -120,6 +120,8 @@ public class FormationWebPortlet extends MVCPortlet {
 		String editValue = GetterUtil.getString(portletPreferences.getValue(EDIT_VALUE, StringPool.BLANK));
 		renderRequest.setAttribute(EDIT_VALUE, editValue);
 		
+		// This code will add the edit mode to your portlet
+		
 		super.doEdit(renderRequest, renderResponse);
 	}
 
