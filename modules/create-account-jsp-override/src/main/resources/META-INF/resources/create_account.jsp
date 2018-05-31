@@ -197,11 +197,11 @@ birthdayCalendar.set(Calendar.YEAR, 1970);
 			</c:if>
 			
 			<liferay-ui:custom-attribute
-			className="com.liferay.portal.kernel.model.User"
-			classPK="0"
-			editable="<%= true %>"
-			label="true"
-			name="user-type"
+				className="com.liferay.portal.kernel.model.User"
+				classPK="0"
+				editable="<%= true %>"
+				label="true"
+				name="user-type"
 			/>
 		</aui:col>
 	</aui:fieldset>
