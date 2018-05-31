@@ -59,36 +59,36 @@ public class ViewMVCRenderCommand implements MVCRenderCommand {
 			
 			LOGGER.info("ViewMVCRenderCommand advancedPortletInstanceConfiguration = " + advancedPortletInstanceConfiguration);
 			
-			// Get user type using Liferay services
-			try {
-				User user = PortalUtil.getUser(renderRequest);
-				
-				
-				long classNameId = ClassNameLocalServiceUtil.getClassNameId(User.class.getName());
-				try {
-					ExpandoTable table = ExpandoTableLocalServiceUtil.getTable(user.getCompanyId(),
-							classNameId, ExpandoTableConstants.DEFAULT_TABLE_NAME);
-					ExpandoColumn existingEc = ExpandoColumnLocalServiceUtil.getColumn(table.getTableId(), "user-type");
-					ExpandoValue expandoValue = ExpandoValueLocalServiceUtil.getValue(table.getTableId(), existingEc.getColumnId(), user.getUserId());
-					
-					LOGGER.info("user-type from expandoValue = " + expandoValue.getData());
-					//LOGGER.info("user-type" + GetterUtil.getString(user.getExpandoBridge().getAttribute("user-type") ));
-				} catch (Exception e) {
-					e.printStackTrace();
-					LOGGER.error("Unable to createOrGetCustomTable : " + e.getMessage());
-				}
-				
-			} catch (PortalException e) {
-				LOGGER.info(e);
-			} catch (Exception e) {
-				LOGGER.info(e);
-			}
-			
-			// Get user type using expandoBridge
-			
-			LOGGER.info("user-type from expandoBridge = " + StringUtil.merge(GetterUtil.getStringValues(themeDisplay.getUser().getExpandoBridge().getAttribute("user-type"))));
-			
-			
+//			// Get user type using Liferay services
+//			try {
+//				User user = PortalUtil.getUser(renderRequest);
+//				
+//				
+//				long classNameId = ClassNameLocalServiceUtil.getClassNameId(User.class.getName());
+//				try {
+//					ExpandoTable table = ExpandoTableLocalServiceUtil.getTable(user.getCompanyId(),
+//							classNameId, ExpandoTableConstants.DEFAULT_TABLE_NAME);
+//					ExpandoColumn existingEc = ExpandoColumnLocalServiceUtil.getColumn(table.getTableId(), "user-type");
+//					ExpandoValue expandoValue = ExpandoValueLocalServiceUtil.getValue(table.getTableId(), existingEc.getColumnId(), user.getUserId());
+//					
+//					LOGGER.info("user-type from expandoValue = " + expandoValue.getData());
+//					//LOGGER.info("user-type" + GetterUtil.getString(user.getExpandoBridge().getAttribute("user-type") ));
+//				} catch (Exception e) {
+//					e.printStackTrace();
+//					LOGGER.error("Unable to createOrGetCustomTable : " + e.getMessage());
+//				}
+//				
+//			} catch (PortalException e) {
+//				LOGGER.info(e);
+//			} catch (Exception e) {
+//				LOGGER.info(e);
+//			}
+//			
+//			// Get user type using expandoBridge
+//			
+//			LOGGER.info("user-type from expandoBridge = " + StringUtil.merge(GetterUtil.getStringValues(themeDisplay.getUser().getExpandoBridge().getAttribute("user-type"))));
+//			
+//			
 			
 			renderRequest.setAttribute("advancedPortletInstanceConfiguration", advancedPortletInstanceConfiguration);
 		} catch (ConfigurationException e) {
