@@ -33,7 +33,7 @@ public class ExpandoValuesStartupAction implements LifecycleAction {
 	/**
 	 * The logger
 	 */
-	private static final Log LOGGER = LogFactoryUtil.getLog(LogUserLoginAction.class);
+	private static final Log LOGGER = LogFactoryUtil.getLog(ExpandoValuesStartupAction.class);
 	
 	@Override
 	public void processLifecycleEvent(LifecycleEvent lifecycleEvent) throws ActionException {
