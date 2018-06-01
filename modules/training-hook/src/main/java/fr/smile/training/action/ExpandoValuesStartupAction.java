@@ -41,14 +41,23 @@ public class ExpandoValuesStartupAction implements LifecycleAction {
 		// Slide 119
 		// get User test
 		
+	 	/// 
+		// PortalUtil.getCompanyId(lifecycleEvent.getRequest());
+		
 		// Get default web id from portal.properties
 		String webId = PropsUtil.get("company.default.web.id");
 		
 		try {
+			// Get Company id -> virtual instance
 			long companyId = CompanyLocalServiceUtil.getCompanyByWebId( webId).getCompanyId();
 			
+			// Get liferay user
+			// Use liferay user service
+			// Local est un accès à la base de données sans filtrages des permissions
+			// Pas local utilisation du check des permissions
 			User user = UserLocalServiceUtil.getUserByEmailAddress(companyId, "test@liferay.com");
 
+			// Get user class name
 			String className = User.class.getName();
 			String tableName = ExpandoTableConstants.DEFAULT_TABLE_NAME;
 			ExpandoTable expandoTable = addExpandoTable(companyId, className, tableName);
