@@ -43,6 +43,6 @@ public class CustomResourceBundle extends ResourceBundle {
 	}
 
 	private final ResourceBundle _resourceBundle = ResourceBundle.getBundle(
-		"content.Language", UTF8Control.INSTANCE);
+		"content.Language_en_US", UTF8Control.INSTANCE);
 
 }

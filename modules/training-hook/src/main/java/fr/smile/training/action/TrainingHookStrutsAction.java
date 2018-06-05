@@ -29,7 +29,7 @@ import org.osgi.service.component.annotations.Component;
 @Component(
 	immediate = true,
 	property = {
-        "path=/portal/traininghook"
+        "path=/portal/logout"
     },
     service = StrutsAction.class
 )
@@ -40,9 +40,10 @@ public class TrainingHookStrutsAction extends BaseStrutsAction  {
 		throws Exception {
 
 		if (_log.isDebugEnabled()) {
-			_log.debug("Processing path /c/portal/traininghook");
+			_log.debug("Processing path /c/portal/logout");
 		}
 
+		_log.info("Processing path /c/portal/logout");
 		RequestDispatcher requestDispatcher =
 			_servletContext.getRequestDispatcher("traininghookstrutsaction/html/portal/traininghook.jsp");
 
