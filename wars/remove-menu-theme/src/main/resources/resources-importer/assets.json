@@ -1,0 +1,24 @@
+{
+    "assets": [
+        {
+            "name": "image1.jpg",
+            "tags": [
+                "space",
+                "program"
+            ]
+        },
+        {
+            "abstractSummary": "This is an abstract summary.",
+            "name": "Space Program.xml",
+            "smallImage": "rss.jpg",
+            "tags": [
+                "space"
+            ]
+        },
+        {
+            "abstractSummary": "This is an abstract summary 1.",
+            "name": "Space Program2.xml",
+            "smallImage": "rss.jpg"
+        }
+    ]
+}
