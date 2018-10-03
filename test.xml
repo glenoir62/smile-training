@@ -1,0 +1,14 @@
+<Resource
+auth=”Container”
+description=”Digital Enterprise DB Connection”
+driverClass=”com.mysql.jdbc.Driver”
+maxPoolSize=”75”
+minPoolSize=”10”
+acquireIncrement=”5”
+name=”jdbc/LiferayPool”
+user=”XXXXXX”
+password=”XXXXXXXXX”
+factory=”org.apache.naming.factory.BeanFactory”
+type=”com.mchange.v2.c3p0.ComboPooledDataSource”
+jdbcUrl=”jdbc:mysql://someServer:3306/liferay_dxp?useUnicode=true&a
+mp;characterEncoding=UTF-8&amp;useFastDateParsing=false”/>
